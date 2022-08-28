@@ -30,7 +30,9 @@ class Body extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/login-page');
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: kSecomdaryColor,
                   elevation: 10,
@@ -50,7 +52,9 @@ class Body extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/signup');
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: kSecomdaryColor,
                   elevation: 10,
