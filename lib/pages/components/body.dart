@@ -57,7 +57,7 @@ class Body extends StatelessWidget {
                 },
                 style: TextButton.styleFrom(
                   backgroundColor: kSecomdaryColor,
-                  elevation: 10,
+                  elevation: 11,
                 ),
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(130, 8, 130, 8),
