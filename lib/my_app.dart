@@ -1,7 +1,7 @@
 import 'package:doctor_search/constants.dart';
 import 'package:doctor_search/pages/begin_page.dart';
 import 'package:doctor_search/pages/login_page.dart';
-import 'package:doctor_search/pages/signup.dart';
+import 'package:doctor_search/pages/signature_page/signup-1.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
