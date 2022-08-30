@@ -66,17 +66,21 @@ class _LoginPage extends State<LoginPage> {
               ),
               const TextField(
                 decoration: InputDecoration(
-                    icon: Icon(
-                  Icons.person,
-                  color: kSecomdaryColor,
-                )),
+                    border: OutlineInputBorder(),
+                    labelText: 'Usuário',
+                    prefixIcon: Icon(
+                      Icons.person,
+                      color: kSecomdaryColor,
+                    )),
               ),
               const SizedBox(
                 height: 20,
               ),
               const TextField(
                 decoration: InputDecoration(
-                  icon: Icon(
+                  border: OutlineInputBorder(),
+                  labelText: 'Senha',
+                  prefixIcon: Icon(
                     Icons.lock,
                     color: kSecomdaryColor,
                   ),
