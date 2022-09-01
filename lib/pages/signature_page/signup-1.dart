@@ -3,11 +3,14 @@ import 'package:doctor_search/pages/components/body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class Signup extends StatelessWidget {
   Signup({Key? key}) : super(key: key);
   var emailController = TextEditingController();
   var formKey = GlobalKey<FormState>();
+  var maskPhone = MaskTextInputFormatter(mask: '(##) # ####-####');
+  var maskDate = MaskTextInputFormatter(mask: '##/##/####');
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +78,7 @@ class Signup extends StatelessWidget {
                       height: 4,
                     ),
                     TextFormField(
+                      inputFormatters: [maskDate],
                       keyboardType: TextInputType.datetime,
                       decoration: const InputDecoration(
                         hintText: 'DD/MM/YYYY',
@@ -163,6 +167,7 @@ class Signup extends StatelessWidget {
                       height: 4,
                     ),
                     TextFormField(
+                      inputFormatters: [maskPhone],
                       keyboardType: TextInputType.phone,
                       decoration: const InputDecoration(
                         hintText: '(31) 99999-9999',
@@ -181,7 +186,7 @@ class Signup extends StatelessWidget {
                       child: TextButton(
                         onPressed: () {
                           if (formKey.currentState?.validate() ?? false) {
-                            Navigator.of(context).pushNamed('/login-page');
+                            Navigator.of(context).pushNamed('/signupTwo');
                           }
                         },
                         style: TextButton.styleFrom(
