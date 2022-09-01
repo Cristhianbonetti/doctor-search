@@ -4,6 +4,8 @@ import 'package:doctor_search/pages/login_page.dart';
 import 'package:doctor_search/pages/signature_page/signup-1.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/signature_page/signup-2.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const BeginPage(),
         '/login-page': (context) => const LoginPage(),
         '/signup': (context) => Signup(),
+        '/signupTwo': (context) => SignupTwo(),
       },
     );
   }
