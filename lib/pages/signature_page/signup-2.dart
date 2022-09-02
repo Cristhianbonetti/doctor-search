@@ -1,14 +1,14 @@
+import 'package:brasil_fields/brasil_fields.dart';
 import 'package:doctor_search/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class SignupTwo extends StatelessWidget {
   SignupTwo({Key? key}) : super(key: key);
 
   var formKey = GlobalKey<FormState>();
-  var maskCPF = MaskTextInputFormatter(mask: '###.###.###-##');
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,10 @@ class SignupTwo extends StatelessWidget {
                 child: Column(
                   children: [
                     TextFormField(
-                      inputFormatters: [maskCPF],
+                      inputFormatters: [
+                        FilteringTextInputFormatter.digitsOnly,
+                        CpfInputFormatter()
+                      ],
                       decoration: const InputDecoration(
                         hintText: '111.111.111-11',
                         prefixIcon: Icon(
